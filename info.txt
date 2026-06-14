@@ -1,0 +1,72 @@
+credit-card-fraud-detection/
+│
+├── services/
+│   │
+│   ├── api-gateway/
+│   │   ├── src/
+│   │   │   └── app.py
+│   │   ├── requirements.txt
+│   │   ├── Dockerfile
+│   │   └── README.md
+│   │
+│   ├── transaction-service/
+│   │   ├── src/
+│   │   │   └── app.py
+│   │   ├── requirements.txt
+│   │   ├── Dockerfile
+│   │   └── README.md
+│   │
+│   ├── fraud-service/
+│   │   ├── src/
+│   │   │   ├── app.py
+│   │   │   ├── model.py
+│   │   │   └── preprocess.py
+│   │   ├── models/
+│   │   │   └── fraud_model.pkl
+│   │   ├── requirements.txt
+│   │   ├── Dockerfile
+│   │   └── README.md
+│   │
+│   └── notification-service/
+│       ├── src/
+│       │   └── app.py
+│       ├── requirements.txt
+│       ├── Dockerfile
+│       └── README.md
+│
+├── frontend/                  # Add later
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── Dockerfile
+│
+├── k8s/
+│   ├── api-gateway/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   │
+│   ├── transaction-service/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   │
+│   ├── fraud-service/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   │
+│   ├── notification-service/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   │
+│   ├── prometheus/
+│   │   ├── deployment.yaml
+│   │   ├── service.yaml
+│   │   └── configmap.yaml
+│   │
+│   └── grafana/
+│       ├── deployment.yaml
+│       └── service.yaml
+│
+├── docker-compose.yml         # For local testing
+├── .gitignore
+├── README.md
+└── architecture.png
