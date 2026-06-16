@@ -1,3 +1,4 @@
 flask>=2.0
 requests
 gunicorn
+prometheus-client
