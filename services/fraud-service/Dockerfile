@@ -8,7 +8,8 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 # copy source
 COPY services/fraud-service/src /app
 
-# copy trained model and scaler from repo
+# create models directory and copy trained model and scaler from repo
+RUN mkdir -p /app/models
 COPY training/models/logistic.joblib /app/models/logistic.joblib
 COPY training/processed/amount_scaler.joblib /app/models/amount_scaler.joblib
 

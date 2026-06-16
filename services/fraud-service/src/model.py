@@ -6,7 +6,7 @@ import numpy as np
 class FraudModel:
     def __init__(self):
         here = os.path.dirname(__file__)
-        models_dir = os.path.abspath(os.path.join(here, "..", "models"))
+        models_dir = os.path.abspath(os.path.join(here, "models"))
         # fallback to repo training/models if service models folder not populated
         repo_models_dir = os.path.abspath(os.path.join(here, "..", "..", "..", "training", "models"))
         if not os.path.exists(models_dir) and os.path.exists(repo_models_dir):
