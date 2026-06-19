@@ -29,7 +29,7 @@ services:
       dockerfile: services/api-gateway/Dockerfile
     image: api-gateway:latest
     ports:
-      - "8080:8080"
+      - "8083:8080" # changed host port to avoid conflict on host
     environment:
       - TRANSACTION_SERVICE_URL=http://transaction-service:8080/transaction
     depends_on:
